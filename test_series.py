@@ -64,8 +64,9 @@ def sum_series_test(func):
         print("!Test 1 failed!")
 
     print("\nRunning test 2:")
+    # Running a series that is neither fibonacci nor lucas
     try:
-        assert func(3, 2, 3) == 8
+        assert func(4, 2, 3) == 13
         print("Test 2 passed.")
     except AssertionError as E:
         print("!Test 2 failed!")

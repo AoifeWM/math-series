@@ -1,5 +1,9 @@
 import test_series
 
+# The steps are off by one for some reason (curr actually describing the next in the series, not the "current",
+# and prev being the correct output) but as far as I can tell this is just a weird semantic difference and these all
+# work as expected.
+
 
 def fibonacci(n):
     prev = 0
