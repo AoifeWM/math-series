@@ -6,6 +6,7 @@ import test_series
 
 
 def fibonacci(n):
+    """Returns the Nth step of the fibonacci sequence"""
     prev = 0
     curr = 1
     x = 0
@@ -20,6 +21,7 @@ def fibonacci(n):
 
 
 def lucas(n):
+    """Returns the Nth step of the lucas sequence"""
     prev = 2
     curr = 1
     x = 0
@@ -33,7 +35,12 @@ def lucas(n):
         return False
 
 
-def sum_series(n, prev=0, curr=1):
+def sum_series(n, first=0, second=1):
+    """Returns the Nth step of additive sequences such as fibonacci (which is default). The first two steps of the
+    series are defined by first and second; for example, the arguments (4, 2, 1) will return the 4th step of the
+    lucas sequence. """
+    prev = first
+    curr = second
     x = 0
     if isinstance(n, int) and n >= 0:
         for i in range(n):
